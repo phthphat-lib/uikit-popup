@@ -43,13 +43,17 @@ open class PopUp: NSObject {
         
         window.addSubview(backgroundV)
         backgroundV.frame = window.bounds
+        addViewToBackground()
+        isShowingPopUp = true
+    }
+    
+    fileprivate func addViewToBackground() {
         backgroundV.addSubview(self.view)
         NSLayoutConstraint.activate([
             view.centerXAnchor.constraint(equalTo: backgroundV.centerXAnchor),
             view.centerYAnchor.constraint(equalTo: backgroundV.centerYAnchor)
         ])
         view.sizeToFit()
-        isShowingPopUp = true
     }
 
     @objc public func dismiss() {

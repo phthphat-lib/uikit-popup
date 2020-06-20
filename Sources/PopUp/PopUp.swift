@@ -70,6 +70,6 @@ open class PopUp: NSObject {
 @available(iOS 10.0, *)
 extension PopUp: UIGestureRecognizerDelegate {
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        return touch.view != self.view
+        return touch.view == self.backgroundV
     }
 }

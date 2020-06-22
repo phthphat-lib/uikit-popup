@@ -1,6 +1,6 @@
 # Swift - PopUp
 
-Show popup with your custom view (can be use as notice or loading screen)
+Show popup with your custom view (can be used as notice or loading screen)
 
 ## How to use
 

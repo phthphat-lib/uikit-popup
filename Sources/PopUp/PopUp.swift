@@ -4,7 +4,7 @@ import UIKit
 open class PopUp: NSObject {
     
     public var view: UIView
-    var tapGes: UITapGestureRecognizer?
+    private var tapGes: UITapGestureRecognizer?
     let backgroundV = UIView()
     public var backgroundColor = UIColor.black.withAlphaComponent(0.3)
     public var isShowingPopUp = false
@@ -13,9 +13,9 @@ open class PopUp: NSObject {
         self.view = view
         backgroundV.backgroundColor = self.backgroundColor
         super.init()
-        tapGes = .init(target: self, action: #selector(dismiss))
-        tapGes?.delegate = self
-        backgroundV.addGestureRecognizer(tapGes!)
+//        tapGes = .init(target: self, action: #selector(dismiss))
+//        tapGes?.delegate = self
+//        backgroundV.addGestureRecognizer(tapGes!)
     }
     convenience public init(view: UIView, backgroundColor: UIColor) {
         self.init(view: view)
